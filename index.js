@@ -4,11 +4,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-// Array to store employees
 let employees = [];
-
-// Add employee
 function addEmployee(callback) {
   rl.question('Enter Employee ID: ', (id) => {
     if (employees.find(emp => emp.id === id.trim())) {
@@ -22,8 +18,6 @@ function addEmployee(callback) {
     });
   });
 }
-
-// List employees
 function listEmployees(callback) {
   if (employees.length === 0) {
     console.log('No employees found.');
@@ -35,8 +29,6 @@ function listEmployees(callback) {
   }
   callback();
 }
-
-// Remove employee
 function removeEmployee(callback) {
   rl.question('Enter Employee ID to remove: ', (id) => {
     const index = employees.findIndex(emp => emp.id === id.trim());
@@ -49,8 +41,6 @@ function removeEmployee(callback) {
     callback();
   });
 }
-
-// Export functions and readline interface
 module.exports = {
   rl,
   addEmployee,
