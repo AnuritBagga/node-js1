@@ -1,6 +1,4 @@
 const { rl, addEmployee, listEmployees, removeEmployee } = require('./routes/index');
-
-// Show main menu
 function showMenu() {
   console.log('\n=== Employee Management System ===');
   console.log('1. Add Employee');
@@ -29,6 +27,4 @@ function showMenu() {
     }
   });
 }
-
-// Start CLI
 showMenu();
